@@ -2,10 +2,10 @@
 
 <h2>{{title}}</h2>
 
-<table>
-    <th>Nome</th>
-    {{#each client as |client|}}
-    <td>{{client}}</td>
-  {{/each}}    
+<table border="0.1" >
+    <tr><th>Nome</th></tr>
+    {{#each item as |client|}}
+    <tr><td {{action "showClient" client}}> {{client}} </td><td>Actions:<img src="img/delete.png" {{action "deleteClient" client}}/></td></tr>
+    {{/each}}    
 </table>
   
